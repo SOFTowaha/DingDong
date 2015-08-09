@@ -1,14 +1,4 @@
-/*
-Usage: 
-  Adding this script to your doc: 
-    - Tools > Script Manager > New
-    - Select "Blank Project", then paste this code in and save.
-  Running the script:
-    - Tools > Script Manager
-    -Click Run
-    - Select "ConvertToMarkdown"
-    - Converted doc will be automatically mailed to you. Subject will be "[Google Doc to MarkDown Converter]...".
-*/
+
 
 function ConvertToMarkdown() {
   var numChildren = DocumentApp.getActiveDocument().getActiveSection().getNumChildren();
