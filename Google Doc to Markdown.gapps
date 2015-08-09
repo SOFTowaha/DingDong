@@ -5,9 +5,9 @@ Usage:
     - Select "Blank Project", then paste this code in and save.
   Running the script:
     - Tools > Script Manager
-    - Select "ConvertToMarkdown" function.
-    - Click Run button.
-    - Converted doc will be mailed to you. Subject will be "[MARKDOWN_MAKER]...".
+    -Click Run
+    - Select "ConvertToMarkdown"
+    - Converted doc will be automatically mailed to you. Subject will be "[Google Doc to MarkDown Converter]...".
 */
 
 function ConvertToMarkdown() {
@@ -71,9 +71,9 @@ function ConvertToMarkdown() {
   attachments.push({"fileName":DocumentApp.getActiveDocument().getName()+".md", "mimeType": "text/plain", "content": text});
   
   MailApp.sendEmail(Session.getActiveUser().getEmail(), 
-                    "[MARKDOWN_MAKER] "+DocumentApp.getActiveDocument().getName(), 
+                    "Google Doc to MarkDown Converter "+DocumentApp.getActiveDocument().getName(), 
                     "Your converted markdown document is attached (converted from "+DocumentApp.getActiveDocument().getUrl()+")"+
-                    "\n\nDon't know how to use the format options? See http://github.com/mangini/gdocs2md\n",
+                      "\n\nIf you want to improve the script , Plese refere to: https://github.com/SOFTowaha/DingDong\n",
                     { "attachments": attachments });
 }
 
